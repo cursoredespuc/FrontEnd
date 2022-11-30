@@ -1,0 +1,25 @@
+body{
+    font-family: Helvetica;
+}
+h1{
+	text-align: center;
+}.itens{
+	font-style: italic;
+}div{
+    position: relative;
+    width: 200px;
+    left: 600px;
+}
+input{
+    border-radius: 0;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.lnr-eye{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}

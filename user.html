@@ -1,0 +1,46 @@
+<!DOCTYPE htmml>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Criação de novo usuário</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript">
+			function processamento()
+			{
+			  var ipServidor="192.168.10.2";
+			  var portaServidor="5180";
+              var usuario = document.getElementById("usuario").value;
+              var primeiroNome = document.getElementById("PrimeiroNome").value;
+              var sobrenome = document.getElementById("Sobrenome").value;
+              var email = document.getElementById("email").value;
+              var password = document.getElementById("password").value;
+              var url = "http://" + ipServidor + ":" + portaServidor + "/configura/"+usuario+"/"+password + "/" + primeiroNome + "/" + sobrenome + "/" + email;
+              window.location=url;
+
+			}
+		</script>
+	</head>
+	
+	<body bgcolor="Gray">
+		<header>
+			<h1>Criação de usuário Corporativo</h1>
+		</header>
+		<div align="center">
+			<strong>
+				<p class="itens">Nome de usuario: <input type="PrimeiroNome" id="usuario" required></p>
+
+				<p class="itens">Primeiro Nome: <input type="UltimoNome" id="PrimeiroNome" required></p>
+
+				<p class="itens">Sobrenome: <input type="NomeCompleto" id="Sobrenome" required></p>
+
+				<p class="itens">Email do usuario: <input type="email" id="email" required></p>
+		</div>	
+			<div align="center">
+				<p class="itens">Senha: <input type="password" id="password" placeholder="Digite uma senha">
+            	<span class="lnr lnr-eye"></span></p> 
+           		<button onclick="processamento();">Salvar</button> <button>Cancelar</button>
+            </div>
+			</strong>
+		</div>
+	</body>	
+</html>
